@@ -53,8 +53,8 @@ public class SudokuSolver {
         int subBoxRow = row - row % SUB_BOX;
         int subBoxCol = col - col % SUB_BOX;
 
-        for(int i = subBoxRow ; i < SUB_BOX; i++){
-            for(int j = subBoxCol ; j < SUB_BOX ; j++){
+        for(int i = subBoxRow ; i < subBoxRow + SUB_BOX; i++){
+            for(int j = subBoxCol ; j < subBoxCol + SUB_BOX ; j++){
                 if(map[i][j] == num) return true;
             }
         }
